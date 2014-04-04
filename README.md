@@ -195,6 +195,10 @@ Default is 80. The HTTP port apache will use.
 
 Default is 443. The HTTPS port apache will use.
 
+#####`gr_apache_optional_conf`
+
+Default is "" (string). Additional config for Apache httpd config file.
+
 #####`gr_django_1_4_or_less`
 
 Default is false (boolean). Django settings style.

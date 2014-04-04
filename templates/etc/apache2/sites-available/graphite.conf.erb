@@ -57,4 +57,6 @@ WSGISocketPrefix <%= scope.lookupvar('graphite::params::apache_wsgi_socket_prefi
 	Header set Access-Control-Allow-Headers "origin, authorization, accept"
 <% end %>
 
+<%= scope.lookupvar('graphite::gr_apache_optional_conf') %>
+
 </VirtualHost>
