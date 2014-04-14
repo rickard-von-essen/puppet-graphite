@@ -9,6 +9,7 @@
 class graphite::install::redhat {
 
   include graphite::params
+  include python
 
   Exec { path => '/bin:/usr/bin:/usr/sbin' }
 
