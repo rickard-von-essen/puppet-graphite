@@ -38,14 +38,17 @@ class graphite::install::redhat {
     'Install django-tagging':
       command => 'easy_install django-tagging==0.3.1',
       cwd     => "${::graphite::params::build_dir}",
+      creates => '/usr/lib/python2.6/site-packages/django_tagging-0.3.1-py2.6.egg',
       require => Anchor['graphitepkg::end'];
     'Install twisted':
       command => 'easy_install twisted==11.1.0',
       cwd     => "${::graphite::params::build_dir}",
+      creates => '/usr/lib/python2.6/site-packages/Twisted-11.1.0-py2.6-linux-x86_64.egg',
       require => Anchor['graphitepkg::end'];
     'Install txamqp':
       command => 'easy_install txamqp==0.4',
       cwd     => "${::graphite::params::build_dir}",
+      creates => '/usr/lib/python2.6/site-packages/txAMQP-0.4-py2.6.egg',
       require => Anchor['graphitepkg::end'];
   }
 
