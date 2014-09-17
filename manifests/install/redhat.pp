@@ -20,16 +20,7 @@ class graphite::install::redhat {
   anchor { 'graphitepkg::begin': }
   anchor { 'graphitepkg::end': }
 
-  package { $::graphite::params::graphitepkgs :
-    ensure  => installed,
-    require => Anchor['graphitepkg::begin'],
-    before  => Anchor['graphitepkg::end']
-  }
-
-  # Install required python env special for redhat and derivatives
-
-  package { 'python-setuptools':
-    ensure  => installed,
+  class { 'graphite::install::redhat_pkgs':
     require => Anchor['graphitepkg::begin'],
     before  => Anchor['graphitepkg::end']
   }
